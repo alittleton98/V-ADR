@@ -1,0 +1,73 @@
+﻿<Window x:Class="VADR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VADR"
+        mc:Ignorable="d"
+        Title="Voice-Audio Data Repository" Height="720" Width="1080">
+    <Window.Resources>
+        <ContextMenu x:Key="fileButton">
+            <MenuItem Header="New" />
+            <MenuItem Header="Save" />
+            <MenuItem Header="Save As" />
+            <Separator />
+            <MenuItem Header="Import" />
+        </ContextMenu>
+        <ContextMenu x:Key="editButton">
+            <MenuItem Header="Undo" />
+            <MenuItem Header="Redo" />
+            <Separator />
+            <MenuItem Header="Cut" />
+            <MenuItem Header="Copy" />
+            <MenuItem Header="Paste" />
+        </ContextMenu>
+        <ContextMenu x:Key="viewButton">
+            <MenuItem Header="View Option 1" />
+            <MenuItem Header="View Option 2" />
+            <Separator />
+            <MenuItem Header="View Option A" />
+            <MenuItem Header="View Option B" />
+            <MenuItem Header="View Option C" />
+        </ContextMenu>
+        <ContextMenu x:Key="projectButton">
+            <MenuItem Header="ProjectButton A" />
+            <MenuItem Header="ProjectButton B" />
+        </ContextMenu>
+        <ContextMenu x:Key="toolsButton">
+            <MenuItem Header="Undo" />
+            <MenuItem Header="Redo" />
+            <Separator />
+            <MenuItem Header="Cut" />
+            <MenuItem Header="Copy" />
+            <MenuItem Header="Paste" />
+        </ContextMenu>
+        <ContextMenu x:Key="windowButton">
+            <MenuItem Header="Undo" />
+            <MenuItem Header="Redo" />
+            <Separator />
+            <MenuItem Header="Cut" />
+            <MenuItem Header="Copy" />
+            <MenuItem Header="Paste" />
+        </ContextMenu>
+        <ContextMenu x:Key="helpButton">
+            <MenuItem Header="About" Click="DialogButtonTest"/>
+        </ContextMenu>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Menu Bars-->
+        <WrapPanel Grid.Row="0">
+            <Button xml:space="preserve" x:Name="fileButton" BorderThickness="0" Click="OnFileButtonClick"> File </Button>
+            <Button xml:space="preserve" x:Name="editButton" BorderThickness="0" Click="OnEditButtonClick"> Edit </Button>
+            <Button xml:space="preserve" x:Name="viewButton" BorderThickness="0" Click="OnViewButtonClick"> View </Button>
+            <Button xml:space="preserve" x:Name="projectButton" BorderThickness="0" Click="OnProjectButtonClick"> Project </Button>
+            <Button xml:space="preserve" x:Name="toolsButton" BorderThickness="0" Click="OnToolsButtonClick"> Tools </Button>
+            <Button xml:space="preserve" x:Name="windowButton" BorderThickness="0" Click="OnWindowButtonClick"> Window </Button>
+            <Button xml:space="preserve" x:Name="helpButton" BorderThickness="0" Click="OnHelpButtonClick"> Help </Button>
+        </WrapPanel>
+    </Grid>
+</Window>
